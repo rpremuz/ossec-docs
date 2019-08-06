@@ -218,12 +218,12 @@ Manual APT Installation on Ubuntu and Debian
 
 .. code:: console
 
-        source /etc/lsb-release
-
         # Ubuntu
+        source /etc/lsb-release
         echo "deb https://updates.atomicorp.com/channels/atomic/ubuntu $DISTRIB_CODENAME main" >>  /etc/apt/sources.list.d/atomic.list
 
         # Debian
+        DISTRIB_CODENAME=`lsb_release -cs`
         echo "deb https://updates.atomicorp.com/channels/atomic/debian $DISTRIB_CODENAME main" >>  /etc/apt/sources.list.d/atomic.list
 
 3. Install Agent or Server
